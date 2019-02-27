@@ -22,7 +22,7 @@ export class HomeComponent implements OnInit {
 
   problem(order){
 
-    return order.pago;
+    return order.nopago;
     
   }
 
