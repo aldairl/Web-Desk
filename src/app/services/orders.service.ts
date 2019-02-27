@@ -22,6 +22,14 @@ export class OrdersService {
       estado: "problema al realizar pago",
       mesero: "pedro",
       nopago:true
+    },
+    {
+      tableN: 3,
+      precio: 100,
+      tiempo: 15,
+      estado: "pago",
+      mesero: "juan",
+      nopago:false
     }
   ];
 
