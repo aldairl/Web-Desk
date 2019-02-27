@@ -1,14 +1,14 @@
 <h1>Tables</h1>
 
 <div class="card-columns">
-    <div class="card">
-        <img src="assets/img/chef.jpg" class="card-img-top img-fluid" alt="card image cap" width="10" height="300" >
-       
+
+    <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+        <div class="card-header">Mesa {{ ordersofserver[0].tableN }}</div>
         <div class="card-body">
-          <h5 class="card-title">Mesa {{ ordersofserver[0].tableN }}</h5>
-          <p class="card-text">Precio {{ ordersofserver[0].precio}}</p>
-          <p class="card-text">Mesero {{ ordersofserver[0].mesero}}</p>
-          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          <h5 class="card-title">Estado: {{ ordersofserver[0].estado}}</h5>
+          <p class="card-text">Precio: {{ ordersofserver[0].precio}}</p>
+          <p class="card-text">Mesero: {{ ordersofserver[0].mesero}}</p>
+          <p class="card-text">Tiempo: {{ ordersofserver[0].tiempo}} mn</p>
         </div>
       </div>
 </div>
