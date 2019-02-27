@@ -13,7 +13,7 @@ export class OrdersService {
       tiempo: 20,
       estado: "pago",
       mesero: "juan",
-      pago: false
+      nopago: false
     },
     {
       tableN: 2,
@@ -21,7 +21,7 @@ export class OrdersService {
       tiempo: 10,
       estado: "problema al realizar pago",
       mesero: "pedro",
-      pago:true
+      nopago:true
     }
   ];
 
