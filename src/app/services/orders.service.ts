@@ -12,7 +12,16 @@ export class OrdersService {
       precio: 400,
       tiempo: 20,
       estado: "pago",
-      mesero: "juan"
+      mesero: "juan",
+      pago: false
+    },
+    {
+      tableN: 2,
+      precio: 200,
+      tiempo: 10,
+      estado: "problema al realizar pago",
+      mesero: "pedro",
+      pago:true
     }
   ];
 

@@ -2,13 +2,13 @@
 
 <div class="card-columns">
 
-    <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+    <div [ngClass]="problem(order) ? 'bg-danger': 'bg-primary'"   class="card text-white  mb-3" style="max-width: 14rem;" *ngFor="let order of ordersofserver">
         <div class="card-header">Mesa {{ ordersofserver[0].tableN }}</div>
         <div class="card-body">
-          <h5 class="card-title">Estado: {{ ordersofserver[0].estado}}</h5>
-          <p class="card-text">Precio: {{ ordersofserver[0].precio}}</p>
-          <p class="card-text">Mesero: {{ ordersofserver[0].mesero}}</p>
-          <p class="card-text">Tiempo: {{ ordersofserver[0].tiempo}} mn</p>
+          <h5 class="card-title">Estado: {{ order.estado}}</h5>
+          <p class="card-text">Precio: {{ order.precio}}</p>
+          <p class="card-text">Mesero: {{ order.mesero}}</p>
+          <p class="card-text">Tiempo: {{ order.tiempo}} mn</p>
         </div>
       </div>
 </div>
