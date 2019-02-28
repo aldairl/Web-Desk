@@ -4,7 +4,7 @@
 
     <div class="card text-white  mb-3" style="max-width: 14rem;" *ngFor="let order of ordersofserver" 
     [ngClass]="order.nopago? 'bg-danger': 'bg-primary'">
-        <div class="card-header">Mesa {{ ordersofserver[0].tableN }}</div>
+        <div class="card-header">Mesa {{ order.tableN }}</div>
         <div class="card-body">
           <h5 class="card-title">Estado: {{ order.estado}}</h5>
           <p class="card-text">Precio: {{ order.precio}}</p>
