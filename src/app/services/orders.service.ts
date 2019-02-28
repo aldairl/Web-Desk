@@ -28,7 +28,7 @@ export class OrdersService {
       precio: 100,
       tiempo: 15,
       estado: "pago",
-      mesero: "juan",
+      mesero: "Ana",
       nopago:false
     }
   ];
