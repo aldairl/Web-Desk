@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -33,11 +34,16 @@ export class OrdersService {
     }
   ];
 
-  constructor() {
+  constructor( private http: HttpClient ) {
     console.log("servicio funcionando")
    }
 
    getOrders(){
      return  this.ordersofTables;
    }
+
+   getNewOrders(){
+    return this.http.get('https://api.myjson.com/bins/xddl2');
+   }
+   
 }

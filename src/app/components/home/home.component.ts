@@ -10,17 +10,18 @@ import { OrdersService } from '../../services/orders.service';
 export class HomeComponent implements OnInit {
 
   ordersofserver:any[] =[];
+  newOrders :any[]=[];
 
   constructor( private orders: OrdersService) {
+
+    this.orders.getNewOrders().subscribe((data:any) => {
+      this.ordersofserver = data;
+      console.log(this.ordersofserver);
+    });
    
    }
 
   ngOnInit() {
-
-    
-    this.ordersofserver = this.orders.getOrders();
-
-    console.log(this.ordersofserver);
   }
 
 }

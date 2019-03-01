@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 //services
 import { OrdersService } from './services/orders.service';
+import { HttpClientModule } from '@angular/common/http';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -10,6 +11,7 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
 import { CronometroComponent } from './components/cronometro/cronometro.component';
+
 
 
 @NgModule({
@@ -21,7 +23,8 @@ import { CronometroComponent } from './components/cronometro/cronometro.componen
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [
     OrdersService
