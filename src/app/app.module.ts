@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+
 
 //services
 import { OrdersService } from './services/orders.service';
@@ -11,6 +13,8 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
 import { CronometroComponent } from './components/cronometro/cronometro.component';
+import { ElegirMeseroComponent } from './components/elegir-mesero/elegir-mesero.component';
+import { MeseroServiceService } from './services/mesero-service.service';
 
 
 
@@ -19,15 +23,18 @@ import { CronometroComponent } from './components/cronometro/cronometro.componen
     AppComponent,
     NavbarComponent,
     HomeComponent,
-    CronometroComponent
+    CronometroComponent,
+    ElegirMeseroComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [
-    OrdersService
+    OrdersService,
+    MeseroServiceService
   ],
   bootstrap: [AppComponent]
 })
