@@ -43,7 +43,7 @@ export class OrdersService {
    }
 
    getNewOrders(){
-    return this.http.get('https://api.myjson.com/bins/xddl2');
+    return this.http.get('https://api.myjson.com/bins/fo832');
    }
    
 }

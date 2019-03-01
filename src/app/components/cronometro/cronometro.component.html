@@ -1,5 +1,13 @@
-<div>{{ minuts | number: '2.0' }}: {{ seconds | number: '2.0' }} mn</div>
+<div>
+<div *ngIf= "ocult"> 
+  <h2> {{ minuts | number: '2.0' }}: {{ seconds | number: '2.0' }} mn</h2>
+
+</div>
 <br>
-<button (click) = "start()" class="btn btn-outline-light">
+<button *ngIf="ocult" (click) = "start()" class="btn btn-outline-light">
   {{ buttonLabel }}
 </button>
+
+
+<button class="btn btn-outline-light"  [ngClass]="listo ? 'bg-primary': 'bg-success'" (click)="entregado()">{{bottonEntregar}}</button> 
+</div>

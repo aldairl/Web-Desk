@@ -26,9 +26,4 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
   }
 
-  entregar(ent:boolean){
-    this.isGived = false;
-    console.log("en padre")
-  }
-
 }

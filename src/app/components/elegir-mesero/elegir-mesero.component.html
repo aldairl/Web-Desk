@@ -1,10 +1,9 @@
-<p>
+<p *ngIf = "seleccionado">
   <span>Lista Meseros:</span>
   <select [(ngModel)]="mesero" class="custom-select">
     <option  *ngFor="let grupo of listaMeseros" value="{{grupo.nombre}}" >{{grupo.nombre }}</option>
   </select>
 </p>
-<p>
-   
+<p>   
    <span>Mesero:</span> <span> {{mesero}}</span>
 </p>

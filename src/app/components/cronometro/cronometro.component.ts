@@ -14,7 +14,9 @@ export class CronometroComponent implements OnInit {
   seconds: number = 0;
   isStart: boolean = false;
   buttonLabel: String = "Aprobar";
-  ocult:boolean = false;
+  ocult:boolean = true;
+  bottonEntregar:string = "Entregar";
+  listo:boolean=true;
   
 
   constructor() {
@@ -35,13 +37,14 @@ export class CronometroComponent implements OnInit {
       if (--this.seconds < 0) {
         this.seconds = 59;
 
-        if (--this.minuts < 9) {
+        if (--this.minuts < 2) {
           alert(`el pedido de la mesa ${this.mesa} esta al limite de entrega`);
           this.buttonLabel = "Retardado!!!"
             this.minuts = 1;
             this.seconds = 59;
           
         }
+
       }
     }
 
@@ -57,6 +60,13 @@ export class CronometroComponent implements OnInit {
     }
     this.buttonLabel = this.isStart ? 'En Progreso...' : 'Aprobar';
 
+  }
+
+  entregado(){
+    this.bottonEntregar = "Listo";
+    this.listo = false;
+    this.start();
+    this.ocult = false;
   }
 
 }
