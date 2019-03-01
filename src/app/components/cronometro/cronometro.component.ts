@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-cronometro',
@@ -7,8 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CronometroComponent implements OnInit {
 
-  minuts:number = 24;
-  seconds:number=59;
+  @Input() minuts:number;
+  
+  seconds:number=0;
 
   constructor() {
     
@@ -32,7 +33,7 @@ export class CronometroComponent implements OnInit {
   }
 
 
-  start(){
+  start(){  
     setInterval( ()=> this.tick(), 1000 );
   }
 

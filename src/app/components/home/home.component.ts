@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { OrdersService } from '../../services/orders.service';
-import { CronometroComponent } from '../cronometro/cronometro.component';
+
 
 @Component({
   selector: 'app-home',

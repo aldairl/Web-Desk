@@ -2,17 +2,19 @@
 
 <div class="card-columns">
 
-    <div class="card text-white  mb-3" style="max-width: 14rem;" *ngFor="let order of ordersofserver; let i = index" 
+  <div class="card text-white  mb-3" style="max-width: 14rem;" *ngFor="let order of ordersofserver; let i = index"
     [ngClass]="order.nopago? 'bg-danger': 'bg-primary'">
-        <div class="card-header">Mesa {{ order.tableN }}</div>
-        <div class="card-body">
-          <h5 class="card-title">Estado: {{ order.estado}}</h5>
-          <p class="card-text">Precio: {{ order.precio}}</p>
-          <p class="card-text">Mesero: {{ order.mesero}}</p>
-          <p class="card-text">Tiempo: {{ order.tiempo}} mn</p>
-          
-        </div>
-        <app-cronometro></app-cronometro>
-        
-      </div>
+    <div class="card-header">Mesa {{ order.tableN }}</div>
+    <div class="card-body">
+      <h5 class="card-title">Estado: {{ order.estado}}</h5>
+      <p class="card-text">Precio: {{ order.precio}}</p>
+      <p class="card-text">Mesero: {{ order.mesero}}</p>
+      <p class="card-text">Tiempo Estimado:
+        <app-cronometro [minuts]=" order.tiempo "></app-cronometro>
+      </p>
+
+    </div>
+
+
+  </div>
 </div>
