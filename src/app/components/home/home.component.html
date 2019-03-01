@@ -2,10 +2,11 @@
 
   <h1>Tables With Orders</h1>
 
-  <div class="card-columns">
+  <div class="card-columns" >
 
     <div class="card text-white" style="max-width: 16rem;" *ngFor="let order of ordersofserver; let i = index"
-      [ngClass]="order.nopago? 'bg-danger': 'bg-primary'">
+      [ngClass]="order.nopago ? 'bg-danger': 'bg-primary'"  >
+      <div  *ngIf= "isGived" >
       <div class="card-header">Mesa {{ order.tableN }}</div>
       <div class="card-body">
         <h5 class="card-title">Estado: {{ order.estado}}</h5>
@@ -15,7 +16,7 @@
           <app-cronometro [minuts]=" order.tiempo "></app-cronometro>
           <app-elegir-mesero></app-elegir-mesero>
         </p>
-
+      </div>
       </div>
     </div>
   </div>

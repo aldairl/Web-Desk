@@ -12,6 +12,8 @@ export class HomeComponent implements OnInit {
   ordersofserver:any[] =[];
   newOrders :any[]=[];
 
+  isGived:boolean=true;
+
   constructor( private orders: OrdersService) {
 
     this.orders.getNewOrders().subscribe((data:any) => {
@@ -22,6 +24,11 @@ export class HomeComponent implements OnInit {
    }
 
   ngOnInit() {
+  }
+
+  entregar(ent:boolean){
+    this.isGived = false;
+    console.log("en padre")
   }
 
 }
